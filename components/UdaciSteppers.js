@@ -34,7 +34,6 @@ export default function UdaciSteppers ({ max, unit, step, value, onIncrement, on
     </View>
   )
 }
-
 const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',

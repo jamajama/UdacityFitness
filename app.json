@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "reactnd-UdaciFitness-complete",
-    "slug": "reactnd-UdaciFitness-complete",
+    "name": "UdaciFitness",
+    "slug": "udacifitness",
     "privacy": "public",
     "sdkVersion": "33.0.0",
     "platforms": [
@@ -24,7 +24,12 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
-    }
+      "supportsTablet": true,
+      "bundleIdentifier": "org.udacifitness.exp"
+    },
+    "android": {
+      "package": "org.udacifitness.exp"
+    },
+    "description": "This is a great project"
   }
 }

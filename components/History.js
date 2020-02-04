@@ -16,8 +16,7 @@ class History extends Component {
   }
   componentDidMount () {
     const { dispatch } = this.props
-
-    fetchCalendarResults()
+     fetchCalendarResults()
       .then((entries) => dispatch(receiveEntries(entries)))
       .then(({ entries }) => {
         if (!entries[timeToString()]) {
@@ -38,12 +37,12 @@ class History extends Component {
             </Text>
           </View>
         : <TouchableOpacity
-            onPress={() => this.props.navigation.navigate(
-              'EntryDetail',
-              { entryId: key }
-            )}
+        onPress={() => this.props.navigation.navigate(
+          'EntryDetail',
+          { entryId: key }
+          )}
           >
-            <MetricCard date={formattedDate} metrics={metrics} />
+              <MetricCard date={formattedDate} metrics={metrics} />
           </TouchableOpacity>}
     </View>
   )
@@ -57,24 +56,21 @@ class History extends Component {
       </View>
     )
   }
-  render() {
-    const { entries } = this.props
-    const { ready } = this.state
-
-    if (ready === false) {
-      return <AppLoading />
-    }
-
-    return (
-      <UdaciFitnessCalendar
-        items={entries}
-        renderItem={this.renderItem}
-        renderEmptyDate={this.renderEmptyDate}
-      />
-    )
+render() {
+  const { entries } = this.props
+  const { ready } = this.state
+   if (ready === false) {
+    return <AppLoading />
   }
+   return (
+    <UdaciFitnessCalendar
+      items={entries}
+      renderItem={this.renderItem}
+      renderEmptyDate={this.renderEmptyDate}
+    />
+  )
 }
-
+}
 const styles = StyleSheet.create({
   item: {
     backgroundColor: white,
@@ -98,14 +94,11 @@ const styles = StyleSheet.create({
     paddingBottom: 20
   }
 })
-
-
-function mapStateToProps (entries) {
+ function mapStateToProps (entries) {
   return {
     entries
   }
 }
-
-export default connect(
+ export default connect(
   mapStateToProps,
 )(History)

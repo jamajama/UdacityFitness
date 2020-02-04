@@ -20,7 +20,6 @@ export default function UdaciSlider ({ max, unit, step, value, onChange }) {
     </View>
   )
 }
-
 const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',

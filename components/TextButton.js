@@ -9,7 +9,6 @@ export default function TextButton ({ children, onPress, style = {} }) {
     </TouchableOpacity>
   )
 }
-
 const styles = StyleSheet.create({
   reset: {
     textAlign: 'center',
